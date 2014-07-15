@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Improving Load Times with CDNs by Tom Byrer</title>
+<meta name="author" content="Tom Byrer" />
+<meta name="description" content="" />
+<meta name="keywords"  content="" />
+<meta name="Resource-type" content="Document" />
+
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.fullpage/2.1.8/jquery.fullPage.min.css" />
+<link rel="stylesheet" href="c/c.css" />
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900' rel='stylesheet' type='text/css'>
+
+<!--[if IE]>
+	<script type="text/javascript">
+		 var console = { log: function() {} };
+	</script>
+<![endif]-->
+
+<!-- laod the latest 1.11.* jQuery branch
+<script src="http://cdn.jsdelivr.net/jquery/1.11/jquery.min.js"></script> -->
+<!-- load a collated jquery.easings.min.js, jquery.slimscroll.min.js, & jquery.fullPage.min.js in one call -->
+<script src="http://cdn.jsdelivr.net/g/jquery@1.11,slimscroll@1.3,jquery.fullpage@2.1"></script>
+<!-- <script src="http://cdn.jsdelivr.net/jquery.ui/1.9.2/jquery.ui.effect.min.js"></script>
+<script src="http://cdn.jsdelivr.net/slimscroll/1.3.2/jquery.slimscroll.min.js"></script> -->
+
+<script src="j/jquery.easings.min.js"></script>
+<!-- <script src="j/jquery.slimscroll.min.js"></script>
+<script src="j/jquery.fullPage.min.js"></script> -->
+<script src="http://cdn.jsdelivr.net/jquery.fullpage/2.1.8/jquery.fullPage.min.js"></script>
+<script src="j/j.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			sectionsColor: ['#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd' ],
+			anchors: [ 'Index', 'What_is_a_CDN', 'CDNs_you_use_weekly', 'Other_CDNs', 'CDN_vs_Plain_Old-School_Hosting', 'CDNs_speed_page_loading', 'Browsers_HTTP_Connections', 'FREE_HTTP_connections', 'Disadvantages', 'Free_CDN_pit_fight', 'CloudFlare', 'ajax.googleapis.com_google.com_fonts', 'CDNJS', 'jsDelivr', 'CDN_Results'],
+			navigation: true,
+			navigationPosition: 'right',
+			navigationPosition: 'right',
+			navigationTooltips: ['Index', 'What is a CDN', 'CDNs you use weekly', 'Other CDNs', 'CDN vs Plain Old-School Hosting', 'CDNs speed page loading', 'Browsers HTTP Connections', 'FREE HTTP connections', 'Disadvantages', 'Free CDN pit fight', 'CloudFlare', 'Google apis & fonts', 'CDNJS', 'jsDelivr', 'CDN Results'],
+			sectionSelector: '.fp-art',
+			scrollingSpeed: 618
+		});
+	});
+</script>
+
+</head><body>
+
+<main id="fullpage">
+
+<article class="fp-art" id="fp-art0"><div class="centered"><h1>Improving Load Times with CDNs</h1>
+<ul>
+<li>by @tomByrer</li>
+<li>github.com/tomByrer</li>
+<li>works at: with you?</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art1"><div class="centered"><h2>What is a CDN?</h2>
+<p><b>C</b>ontent <b>D</b>elivery <b>N</b>etwork</p>
+<blockquote><p>Distributing cloned web assets though multiple servers in different cities.</p></blockquote>
+<p><b>Internet at its best: fastest path!</b></p>
+</div></article>
+
+<article class="fp-art" id="fp-art2"><div class="centered"><h2>CDNs you use weekly</h2>
+<ul>
+<li>Google<ul>
+<li>google-analytics</li>
+<li>ajax.googleapis.com hosted libraries<ul><li>common: jQuery &amp; AngularJS</li></ul></li>
+<li>Google Fonts (640ish font families)</li>
+</ul>
+</li>
+<li>Adobe Typekit's fancy "web" fonts</li>
+<li>MaxCDN<ul><li>code.jQuery.com, netdna.BootstrapCDN.com</li></ul></li>
+<li>Cloudflare (free &amp; paid)<ul>
+<li>optimizer, security, 24 PoPs</li>
+</ul>
+</li>
+</ul>
+</div></article>
+
+
+<article class="fp-art" id="fp-art3"><div class="centered"><h2>Other CDNs</h2>
+<ul>
+<li>Free for OSS assets (minified JS, CSS, Fonts)<ul>
+<li>jsDelivr (1160+ projects)</li>
+<li>CDNJS (750ish projects)</li>
+</ul>
+</li>
+<li>Paid<ul>
+<li>Amazon CloudFront</li>
+<li>CDNetworks (140+ PoPs!)</li>
+<li>CenturyLink/Level3</li>
+</ul>
+</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art4"><div class="centered"><h2>CDN vs Plain<br>Old-School Hosting</h2>
+<ul>
+<li>Speed page loading<ul>
+<li>happy vistors = more $$$</li>
+<li>reduce FOUT</li>
+<li>better Google ranking</li>
+</ul>
+</li>
+<li>Better resistance to traffic/DoS spikes</li>
+<li>Reduce hosting costs, I/O</li>
+<li>Testing in online editors (JS Bin, CodePen, etc)</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art5"><div class="centered"><h2>CDNs speed page loading</h2>
+<ul>
+<li>Faster hosting<ul>
+<li>Closer = fewer hops</li>
+<li>Tuned to serve static files</li>
+</ul></li>
+<li>Maxes out browsers' Max Connectoins</li>
+</div></article>
+
+<article class="fp-art" id="fp-art6"><div class="centered"><h2>Browsers' HTTP Connections</h2>
+<p class="sectioningText">(<b>Originating Hostname</b> ~ Max Connections via <a href="http://www.browserscope.org/?category=network&amp;v=top&amp;security_results=postMessage%20API=1,JSON.parse%20API=1,toStaticHTML%20API=1,httpOnly%20cookie%20API=1,Block%20location%20spoofing=1,Block%20JSON%20hijacking=1,Cross%20Origin%20Resource%20Sharing=1,Origin%20header=0,Sandbox%20attribute=0,X-Frame-Options=1,X-Content-Type-Options=1,Block%20reflected%20XSS=1,Block%20cross-origin%20CSS%20attacks=1,Strict%20Transport%20Security=1,Block%20reflected%20XSS=0,Content%20Security%20Policy=0,Block%20XSS%20in%20CSS=1">Browserscope</a>)</p>
+<ul>
+<li>FireFox : <b>6</b> <span class="max">of</span> 17</li>
+<li>Chrome : <b>6</b> <span class="max">of</span> 10</li>
+<li>IE11 : <b>13</b> <span class="max">of</span> 17, IE10 : <b>8</b> <span class="max">of</span> 17, IE8 &amp; 9 : <b>6</b> <span class="max">of</span> 35</li>
+<li>Safari, iStuff : <b>6</b> <span class="max">of</span> 17</li>
+<li>Android 4 : <b>6</b> <span class="max">of</span> 16, 2.3 : <b>8</b> <span class="max">of</span> 10</li>
+</ul>
+</div></article>
+<!-- TODO fill bars -->
+
+<article class="fp-art" id="fp-art7"><div class="centered"><h2>FREE HTTP connections!</h2>
+<p class="sectioningText"><b>Max - Hostname = 2 to 11 hidden downloaders</b><p>
+<ul>
+<li>Easy to use: replace static asset links with CDNs<ul>
+<li>Start with larger assets</li>
+<li>Via Grunt/Gulp/build scripts</li>
+<li>Wordpress plugins, etc</li>
+</ul>
+<li>Workaround: 'shard' server<ul>
+<li>Subdomain: http://img.mysite.com/picture.jpg</li>
+<li>May not help I/O, should test</li>
+</ul>
+</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art8"><div class="centered"><h2>Disadvantages</h2>
+<ul>
+<li>Could clog up other non-originating requests<ul>
+<li>Social plugins, tracking, API calls, ads...</li>
+</ul></li>
+<li>Free CDNs can't use your personalized files</li>
+<p class="sectioningText"><b>(excuses)</b><p>
+<li>Drops cookies for tracking (advantage?)</li>
+<li>DNS lookup tax<ul>
+<li>(only once & may be compensated by speed)</li>
+</ul>
+</li>
+<li>Bit extra time to set up</li>
+<li>Downtime out of control your control<ul>
+<li>(not really; <a href="http://www.cdnperf.com/#jsdelivr,cdnjs,google,yandex,microsoft,jquery,bootstrapcdn/http/90">~99.997%</a> uptime)</li>
+</ul></li>
+</ul>
+</div></article>
+
+
+<article class="fp-art" id="fp-art9"><div class="centered">
+<h2>Free CDN pit fight!</h2>
+<h4>CloudFlare vs Google vs CDNJS vs jsDelivr</h4>
+</div></article>
+
+<article class="fp-art" id="fp-art10"><div class="centered"><h2>CloudFlare</h2>
+<ul>
+<li>Front-line security; all trafic hits CF first</li>
+<li>agresssive <a target="_blank" href="https://www.cloudflare.com/features-optimizer">content optimization</a></li>
+<ul><li>extra cruching for mobile</li></ul>
+<li>CDN growing; <a target="_blank" href="https://www.cloudflare.com/network-map">27 POPs </a> <span class="aside">(2014-07-09)</span></li>
+<p class="sectioningText"><b>CONS</b><p>
+<li>Currently no POPs in China, Russia, Africa, Middle East</li>
+<li>IPs get blocked for political content (China); cost of protecting free press</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art11"><div class="centered"><h2>ajax.googleapis.com &amp; google.com/fonts</h2>
+<ul>
+<li><a href="http://trends.builtwith.com/cdn">Most popular</a></li>
+<ul><li>~2% hitting cache</li></ul>
+<li>Maybe better for Africa, S America, some US cities</li>
+<li>Good font selection</li>
+<p class="sectioningText"><b>CONS</b><p>
+<li>Slower in China</li>
+<li>JS only for jQuery, AngularJS (users can't add more)</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art12"><div class="centered"><h2>CDNJS</h2>
+<ul>
+<li>Uses CloudFlare's network &amp; admins<ul>
+<li>^ great resources</li>
+</ul></li>
+<li>Optional <a target="_blank" href="https://github.com/cdnjs/cdnjs#enabling-npm-auto-update">auto-updates via NPM</a></li>
+<li>Started earlier; more known than jsDelivr</li>
+<li>Doesn't seem to be blocked when CloudFlare IPs are blocked</li>
+<p class="sectioningText"><b>CONS</b><p>
+<li>Smallest network, but growing</li>
+<li>A bit slower than other Free CDNs</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art13"><div class="centered"><h2>jsDelivr</h2>
+<ul>
+<li>CloudFlare + MaxCDN + 6 sponsored PoPs<br>= <a href="http://www.jsdelivr.com/network.php">42 PoP MEGA-Network</a>
+<ul>
+<li><a target="_blank" href="http://www.cedexis.com/">Cedexis</a>' load balancing helps make jsDelivr <a target="_blank" href="http://www.cdnperf.com/">fastest</a></li>
+<!-- <li>better uptime (failsave CDNs)</li> -->
+</ul></li>
+<li><a href="https://github.com/jsdelivr/jsdelivr#version-aliasing">SemVer aliasing</a></li>
+<li>Most projects (over 1130)</li>
+<li><a href="https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request">Collate JS | CSS assets</a></li>
+<li><a target="_blank" href="http://blog.jsdelivr.com/2014/06/public-cdn-auto-updated.html">auto-updating</a> bot</li>
+<p class="sectioningText"><b>CONS</b><p>
+<li>Newest; lesser known/used (but <a href="http://trends.builtwith.com/cdn/jsDelivr">growing</a>)</li>
+</ul>
+</div></article>
+
+<article class="fp-art" id="fp-art14"><div class="centered"><h2>CDN Results</h2>
+<ul>
+<li>Faster loading = happier users</li>
+<li>Happy users Free hosting = happier boss/client</li>
+<li>YMMV: <strong>Test</strong> for yourself!</li>
+</ul>
+<br><h4>fini</h4>
+<h3>by @tomByrer</h3>
+</div></article>
+
+
+</main>
+
+</body>
+</html>
