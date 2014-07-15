@@ -23,13 +23,16 @@
 <!-- laod the latest 1.11.* jQuery branch -->
 <script src="http://cdn.jsdelivr.net/jquery/1.11/jquery.min.js"></script>
 
-<script src="http://cdn.jsdelivr.net/jquery.ui/1.9.2/jquery.ui.effect.min.js"></script>
+<!-- testing if jquery.ui.effect & jquery.easings (from fullpage) are the same -->
+<!-- <script src="http://cdn.jsdelivr.net/jquery.ui/1.9.2/jquery.ui.effect.min.js"></script> -->
+<script src="j/jquery.easings.min.js"></script>
+
 <script src="http://cdn.jsdelivr.net/slimscroll/1.3.2/jquery.slimscroll.min.js"></script>
 <script src="http://cdn.jsdelivr.net/jquery.fullpage/2.1.8/jquery.fullPage.min.js"></script>
 <!-- load a collated jquery.easings.min.js, jquery.slimscroll.min.js, & jquery.fullPage.min.js in one call
 <script src="http://cdn.jsdelivr.net/g/jquery@1.11,slimscroll@1.3,jquery.fullpage@2.1"></script> -->
 
-<script src="j/jquery.easings.min.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
@@ -204,10 +207,10 @@
 </ul></li>
 <li>Optional <a target="_blank" href="https://github.com/cdnjs/cdnjs#enabling-npm-auto-update">auto-updates via NPM</a></li>
 <li>Started earlier; more known than jsDelivr</li>
-<li>Doesn't seem to be blocked when CloudFlare IPs are blocked</li>
 <p class="sectioningText"><b>CONS</b><p>
-<li>Smallest network, but growing</li>
+<li>Smaller network, but growing</li>
 <li>A bit slower than other Free CDNs</li>
+<li>Rare reports of blocks in China</li> 
 </ul>
 </div></article>
 
