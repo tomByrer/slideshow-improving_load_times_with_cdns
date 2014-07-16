@@ -20,17 +20,8 @@
 	</script>
 <![endif]-->
 
-<!-- laod the latest 1.11.* jQuery branch -->
-<script src="http://cdn.jsdelivr.net/jquery/1.11/jquery.min.js"></script>
-
-<!-- testing if jquery.ui.effect & jquery.easings (from fullpage) are the same -->
-<!-- <script src="http://cdn.jsdelivr.net/jquery.ui/1.9.2/jquery.ui.effect.min.js"></script> -->
-<script src="j/jquery.easings.min.js"></script>
-
-<script src="http://cdn.jsdelivr.net/slimscroll/1.3.2/jquery.slimscroll.min.js"></script>
-<script src="http://cdn.jsdelivr.net/jquery.fullpage/2.1.8/jquery.fullPage.min.js"></script>
-<!-- load a collated jquery.easings.min.js, jquery.slimscroll.min.js, & jquery.fullPage.min.js in one call
-<script src="http://cdn.jsdelivr.net/g/jquery@1.11,slimscroll@1.3,jquery.fullpage@2.1"></script> -->
+<!-- load a collated jquery 1.11.*, jquery.easings.min.js, jquery.slimscroll.min.js, & jquery.fullPage.min.js in one call -->
+<script src="http://cdn.jsdelivr.net/g/jquery@1.11,jquery.ui@1.9.2%28jquery.ui.effect.min.js%29,slimscroll@1.3,jquery.fullpage@2.1"></script>
 
 
 <script type="text/javascript">
@@ -43,6 +34,7 @@
 			navigationPosition: 'right',
 			navigationTooltips: ['Index', 'What is a CDN', 'CDNs you use weekly', 'Other CDNs', 'CDN vs Plain Old-School Hosting', 'CDNs speed page loading', 'Browsers HTTP Connections', 'FREE HTTP connections', 'Disadvantages', 'Free CDN pit fight', 'CloudFlare', 'Google apis & fonts', 'CDNJS', 'jsDelivr', 'CDN Results'],
 			sectionSelector: '.fp-art',
+			easing: 'easeInOutCubic',
 			scrollingSpeed: 618
 		});
 	});
@@ -71,7 +63,7 @@
 <li>Google<ul>
 <li>google-analytics</li>
 <li>ajax.googleapis.com hosted libraries<ul><li>common: jQuery &amp; AngularJS</li></ul></li>
-<li>Google Fonts (640ish font families)</li>
+<li>Google Fonts</li>
 </ul>
 </li>
 <li>Adobe Typekit's fancy "web" fonts</li>
@@ -86,7 +78,7 @@
 
 <article class="fp-art" id="fp-art3"><div class="centered"><h2>Other CDNs</h2>
 <ul>
-<li>Free for OSS assets (minified JS, CSS, Fonts)<ul>
+<li>Free for OSS assets (minified JS, CSS, fonts)<ul>
 <li>jsDelivr (1160+ projects)</li>
 <li>CDNJS (750ish projects)</li>
 </ul>
@@ -136,7 +128,9 @@
 <!-- TODO fill bars -->
 
 <article class="fp-art" id="fp-art7"><div class="centered"><h2>FREE HTTP connections!</h2>
-<p class="sectioningText"><b>Max - Hostname = 2 to 11 hidden downloaders</b><p>
+<p class="sectioningText"><b>Max - Hostname = 2 to 11 hidden downloaders!<br>
+To fill a sink; it is faster using both hot & cold.</b><p>
+<br>
 <ul>
 <li>Easy to use: replace static asset links with CDNs<ul>
 <li>Start with larger assets</li>
@@ -173,7 +167,7 @@
 
 <article class="fp-art" id="fp-art9"><div class="centered">
 <h2>Free CDN pit fight!</h2>
-<h4>CloudFlare vs Google vs CDNJS vs jsDelivr</h4>
+<h4><a href="#CloudFlare">CloudFlare</a> vs <a href="#ajax.googleapis.com_google.com_fonts">Google</a> vs <a href="#CDNJS">CDNJS</a> vs <a href="#jsDelivr">jsDelivr</a></h4>
 </div></article>
 
 <article class="fp-art" id="fp-art10"><div class="centered"><h2>CloudFlare</h2>
@@ -191,12 +185,11 @@
 <article class="fp-art" id="fp-art11"><div class="centered"><h2>ajax.googleapis.com &amp; google.com/fonts</h2>
 <ul>
 <li><a href="http://trends.builtwith.com/cdn">Most popular</a></li>
-<ul><li>~2% hitting cache</li></ul>
-<li>Maybe better for Africa, S America, some US cities</li>
-<li>Good font selection</li>
+<li>Maybe better for Africa, S America, some US cities?</li>
+<li>645 fonts & great <a target="_blank" href="https://www.google.com/fonts">front-end</a></li>
 <p class="sectioningText"><b>CONS</b><p>
 <li>Slower in China</li>
-<li>JS only for jQuery, AngularJS (users can't add more)</li>
+<li>JS limited to jQuery, AngularJS, 10 more</li>
 </ul>
 </div></article>
 
@@ -236,8 +229,9 @@
 <li>Happy users Free hosting = happier boss/client</li>
 <li>YMMV: <strong>Test</strong> for yourself!</li>
 </ul>
-<br><h4>fini</h4>
-<h3>by @tomByrer</h3>
+<br><h4>Questions?</h4>
+<h3>tomByrer@gmail.com</h3>
+<h4><a target="_blank" href="https://github.com/tomByrer/slideshow-improving_load_times_with_cdns/tree/gh-pages">github.com/tomByrer/slideshow-improving_load_times_with_cdns/</a></h4>
 </div></article>
 
 

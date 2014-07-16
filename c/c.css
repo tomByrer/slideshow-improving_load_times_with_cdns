@@ -239,7 +239,23 @@ h4 { font-size: 1.5em; }
 	background-color: rgba(253, 251, 244, 0.927);
 }
 
-/* TODO: anchor text color, backgrounds animation */
+.sectioningText {
+	color: #586e75;
+}
+
+a:link {
+	text-decoration: none;
+	color: #268BD2;
+}
+a:visited {
+	text-decoration: none;
+	color: 6C71C4;
+}
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+/* TODO: anchor text color, backgrounds, tests, animation */
 
 /* Demos Menu
  * --------------------------------------- */
