@@ -8,12 +8,6 @@
 <meta name="keywords"  content="" />
 <meta name="Resource-type" content="Document" />
 
-
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.fullpage/2.1.8/jquery.fullPage.min.css" />
-<link rel="stylesheet" href="c/c.css" />
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900' rel='stylesheet' type='text/css'>
-
 <!--[if IE]>
 	<script type="text/javascript">
 		 var console = { log: function() {} };
@@ -21,8 +15,12 @@
 <![endif]-->
 
 <!-- load a collated jquery 1.11.*, jquery.easings.min.js, jquery.slimscroll.min.js, & jquery.fullPage.min.js in one call -->
-<script src="http://cdn.jsdelivr.net/g/jquery@1.11,jquery.ui@1.9.2%28jquery.ui.effect.min.js%29,slimscroll@1.3,jquery.fullpage@2.1"></script>
+<script src="http://cdn.jsdelivr.net/g/jquery@1.11,jquery.ui@1.9.2%28jquery.ui.effect.min.js%29,slimscroll@1.3,jquery.fullpage@2.4"></script>
 
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.fullpage/2.1.8/jquery.fullPage.min.css" />
+<link rel="stylesheet" href="c/c.css" />
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -53,7 +51,7 @@
 </div></article>
 
 <article class="fp-art" id="fp-art1"><div class="centered"><h2>What is a CDN?</h2>
-<p><b>C</b>ontent <b>D</b>elivery <b>N</b>etwork</p>
+<p><a href="https://www.keycdn.com/blog/cdn-infographic-content-delivery-network/" title="Infographic: What is a Content Delivery Network"><b>C</b>ontent <b>D</b>elivery <b>N</b>etwork</a></p>
 <blockquote><p>Distributing cloned web assets though multiple servers in different cities.</p></blockquote>
 <p><b>Internet at its best: fastest path!</b></p>
 </div></article>
@@ -85,7 +83,7 @@
 </li>
 <li>Paid<ul>
 <li>Amazon CloudFront</li>
-<li>CDNetworks (140+ PoPs!)</li>
+<li>CDNetworks (160+ PoPs!)</li>
 <li>CenturyLink/Level3</li>
 </ul>
 </li>
@@ -95,7 +93,7 @@
 <article class="fp-art" id="fp-art4"><div class="centered"><h2>CDN vs Plain<br>Old-School Hosting</h2>
 <ul>
 <li>Speed page loading<ul>
-<li>happy vistors = more $$$</li>
+<li>happy visitors = more $$$</li>
 <li>reduce FOUT</li>
 <li>better Google ranking</li>
 </ul>
@@ -112,23 +110,26 @@
 <li>Closer = fewer hops</li>
 <li>Tuned to serve static files</li>
 </ul></li>
-<li>Maxes out browsers' Max Connectoins</li>
+<li>Maxes out browsers' Max Connections</li>
 </div></article>
 
-<article class="fp-art" id="fp-art6"><div class="centered"><h2>Browsers' HTTP Connections</h2>
-<p class="sectioningText">(<b>Originating Hostname</b> ~ Max Connections via <a href="http://www.browserscope.org/?category=network&amp;v=top&amp;security_results=postMessage%20API=1,JSON.parse%20API=1,toStaticHTML%20API=1,httpOnly%20cookie%20API=1,Block%20location%20spoofing=1,Block%20JSON%20hijacking=1,Cross%20Origin%20Resource%20Sharing=1,Origin%20header=0,Sandbox%20attribute=0,X-Frame-Options=1,X-Content-Type-Options=1,Block%20reflected%20XSS=1,Block%20cross-origin%20CSS%20attacks=1,Strict%20Transport%20Security=1,Block%20reflected%20XSS=0,Content%20Security%20Policy=0,Block%20XSS%20in%20CSS=1">Browserscope</a>)</p>
-<ul>
-<li>FireFox : <b>6</b> <span class="max">of</span> 17</li>
-<li>Chrome : <b>6</b> <span class="max">of</span> 10</li>
-<li>IE11 : <b>13</b> <span class="max">of</span> 17, IE10 : <b>8</b> <span class="max">of</span> 17, IE8 &amp; 9 : <b>6</b> <span class="max">of</span> 35</li>
-<li>Safari, iStuff : <b>6</b> <span class="max">of</span> 17</li>
-<li>Android 4 : <b>6</b> <span class="max">of</span> 16, 2.3 : <b>8</b> <span class="max">of</span> 10</li>
-</ul>
+<article class="fp-art" id="fp-art6"><div class="centered"><h2>Browsers' HTTP1.1 Connections</h2>
+<p class="sectioningText">(Originating Hostname vs Extra External via <a href="http://www.browserscope.org/?category=network&amp;v=top&amp;security_results=postMessage%20API=1,JSON.parse%20API=1,toStaticHTML%20API=1,httpOnly%20cookie%20API=1,Block%20location%20spoofing=1,Block%20JSON%20hijacking=1,Cross%20Origin%20Resource%20Sharing=1,Origin%20header=0,Sandbox%20attribute=0,X-Frame-Options=1,X-Content-Type-Options=1,Block%20reflected%20XSS=1,Block%20cross-origin%20CSS%20attacks=1,Strict%20Transport%20Security=1,Block%20reflected%20XSS=0,Content%20Security%20Policy=0,Block%20XSS%20in%20CSS=1">Browserscope</a>)</p>
+<table class="TFtable">
+<tr><th>Browser</th><th>Originating</th><th>External</th></tr>
+<tr><td>Android 4</td><td>6</td><td>10</td></tr>
+<tr><td>Chrome/Opera</td><td>6</td><td>4</td></tr>
+<tr><td>Firefox</td><td>6</td><td>11</td></tr>
+<tr><td>IE 8 & 9</td><td>6</td><td>29</td></tr>
+<tr><td>IE 10</td><td>8</td><td>9</td></tr>
+<tr><td>IE 11</td><td>13</td><td>4</td></tr>
+<tr><td>iStuff</td><td>4-6</td><td>15+</td></tr>
+<tr><td>Safari</td><td>6</td><td>11</td></tr>
+</table>
 </div></article>
-<!-- TODO fill bars -->
 
 <article class="fp-art" id="fp-art7"><div class="centered"><h2>FREE HTTP connections!</h2>
-<p class="sectioningText"><b>Max - Hostname = 2 to 11 hidden downloaders!<br>
+<p class="sectioningText"><b>Use those 2 to 11 hidden downloaders!<br>
 To fill a sink; it is faster using both hot & cold.</b><p>
 <br>
 <ul>
@@ -138,8 +139,8 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 <li>Wordpress plugins, etc</li>
 </ul>
 <li>Workaround: 'shard' server<ul>
-<li>Subdomain: http://img.mysite.com/picture.jpg</li>
-<li>May not help I/O, should test</li>
+<li>Subdomain: http://<b>static0</b>.mysite.com/picture.jpg</li>
+<li>May not help clients' I/O, should test</li>
 </ul>
 </li>
 </ul>
@@ -152,12 +153,10 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 </ul></li>
 <li>Free CDNs can't use your personalized files</li>
 <p class="sectioningText"><b>(excuses)</b><p>
-<li>Drops cookies for tracking (advantage?)</li>
 <li>DNS lookup tax<ul>
 <li>(only once & may be compensated by speed)</li>
 </ul>
 </li>
-<li>Bit extra time to set up</li>
 <li>Downtime out of control your control<ul>
 <li>(not really; <a href="http://www.cdnperf.com/#jsdelivr,cdnjs,google,yandex,microsoft,jquery,bootstrapcdn/http/90">~99.997%</a> uptime)</li>
 </ul></li>
@@ -170,14 +169,15 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 <h4><a href="#CloudFlare">CloudFlare</a> vs <a href="#ajax.googleapis.com_google.com_fonts">Google</a> vs <a href="#CDNJS">CDNJS</a> vs <a href="#jsDelivr">jsDelivr</a></h4>
 </div></article>
 
+
 <article class="fp-art" id="fp-art10"><div class="centered"><h2>CloudFlare</h2>
 <ul>
 <li>Front-line security; all trafic hits CF first</li>
-<li>agresssive <a target="_blank" href="https://www.cloudflare.com/features-optimizer">content optimization</a></li>
-<ul><li>extra cruching for mobile</li></ul>
-<li>CDN growing; <a target="_blank" href="https://www.cloudflare.com/network-map">27 POPs </a> <span class="aside">(2014-07-09)</span></li>
+<li>aggressive <a target="_blank" href="https://www.cloudflare.com/features-optimizer">content optimization</a></li>
+<ul><li>extra crunching for mobile</li></ul>
+<li>CDN growing; <a target="_blank" href="https://www.cloudflare.com/network-map">31 PoPs </a> <span class="aside">(2015-03)</span></li>
 <p class="sectioningText"><b>CONS</b><p>
-<li>Currently no POPs in China, Russia, Africa, Middle East</li>
+<li>Currently no PoPs in China, Russia, North Africa, Middle East</li>
 <li>IPs get blocked for political content (China); cost of protecting free press</li>
 </ul>
 </div></article>
@@ -185,8 +185,7 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 <article class="fp-art" id="fp-art11"><div class="centered"><h2>ajax.googleapis.com &amp; google.com/fonts</h2>
 <ul>
 <li><a href="http://trends.builtwith.com/cdn">Most popular</a></li>
-<li>Maybe better for Africa, S America, some US cities?</li>
-<li>645 fonts & great <a target="_blank" href="https://www.google.com/fonts">front-end</a></li>
+<li>~700 fonts & great <a target="_blank" href="https://www.google.com/fonts">front-end</a></li>
 <p class="sectioningText"><b>CONS</b><p>
 <li>Slower in China</li>
 <li>JS limited to jQuery, AngularJS, 10 more</li>
@@ -203,20 +202,21 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 <p class="sectioningText"><b>CONS</b><p>
 <li>Smaller network, but growing</li>
 <li>A bit slower than other Free CDNs</li>
-<li>Rare reports of blocks in China</li> 
+<li>Rare reports of blocks in China</li>
 </ul>
 </div></article>
 
 <article class="fp-art" id="fp-art13"><div class="centered"><h2>jsDelivr</h2>
 <ul>
-<li>CloudFlare + MaxCDN + 6 sponsored PoPs<br>= <a href="http://www.jsdelivr.com/network.php">42 PoP MEGA-Network</a>
+<li>CloudFlare + MaxCDN + KeyCDN + sponsored PoPs<br>= <a href="http://www.jsdelivr.com/network.php">70 PoP MEGA-Network</a>
 <ul>
-<li><a target="_blank" href="http://www.cedexis.com/">Cedexis</a>' load balancing helps make jsDelivr <a target="_blank" href="http://www.cdnperf.com/">fastest</a></li>
-<!-- <li>better uptime (failsave CDNs)</li> -->
+<li><a target="_blank" href="http://www.cedexis.com/">Cedexis</a>' load balancing helps make jsDelivr <a target="_blank" href="http://www.cdnperf.com/">fast</a></li>
+<!-- comming https://www.keycdn.com/network https://blog.cloudflare.com/content/images/2014/09/cloudflare-illustration-map-upcoming.png
+ <li>better uptime (failsave CDNs)</li> -->
 </ul></li>
 <li><a href="https://github.com/jsdelivr/jsdelivr#version-aliasing">SemVer aliasing</a></li>
-<li>Most projects (over 1130)</li>
-<li><a href="https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request">Collate JS | CSS assets</a></li>
+<li>Most projects (over 1400)</li>
+<li><a href="https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request">Collate JS | CSS assets</a> (<a href="http://cdn.jsdelivr.net/g/jquery@1.11,jquery.ui@1.9.2%28jquery.ui.effect.min.js%29,slimscroll@1.3,jquery.fullpage@2.1">eg</a>)</li>
 <li><a target="_blank" href="http://blog.jsdelivr.com/2014/06/public-cdn-auto-updated.html">auto-updating</a> bot</li>
 <p class="sectioningText"><b>CONS</b><p>
 <li>Newest; lesser known/used (but <a href="http://trends.builtwith.com/cdn/jsDelivr">growing</a>)</li>
@@ -226,7 +226,7 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 <article class="fp-art" id="fp-art14"><div class="centered"><h2>CDN Results</h2>
 <ul>
 <li>Faster loading = happier users</li>
-<li>Happy users Free hosting = happier boss/client</li>
+<li>Happy users + Free hosting = happier boss/client</li>
 <li>YMMV: <strong>Test</strong> for yourself!</li>
 </ul>
 <br><h4>Questions?</h4>
