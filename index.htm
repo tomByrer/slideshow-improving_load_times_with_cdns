@@ -17,20 +17,20 @@
 <!-- load a collated jquery 1.11.*, jquery.easings.min.js, jquery.slimscroll.min.js, & jquery.fullPage.min.js in one call -->
 <script src="http://cdn.jsdelivr.net/g/jquery@1.11,jquery.ui@1.9.2%28jquery.ui.effect.min.js%29,slimscroll@1.3,jquery.fullpage@2.4"></script>
 
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.fullpage/2.1.8/jquery.fullPage.min.css" />
-<link rel="stylesheet" href="c/c.css" />
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.fullpage/2.4/jquery.fullPage.min.css" />
+<link rel="stylesheet" href="http://tombyrer.github.io/slideshow-improving_load_times_with_cdns/c/c.css" />
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:900' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
-			sectionsColor: ['#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd' ],
-			anchors: [ 'Index', 'What_is_a_CDN', 'CDNs_you_use_weekly', 'Other_CDNs', 'CDN_vs_Plain_Old-School_Hosting', 'CDNs_speed_page_loading', 'Browsers_HTTP_Connections', 'FREE_HTTP_connections', 'Disadvantages', 'Free_CDN_pit_fight', 'CloudFlare', 'ajax.googleapis.com_google.com_fonts', 'CDNJS', 'jsDelivr', 'CDN_Results'],
+			sectionsColor: ['#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#e0f1dd', '#fdf6e3', '#d2e3cf', '#eee8d5', '#eee8d5', '#e0f1dd' ],
+			anchors: [ 'Index', 'What_is_a_CDN', 'CDNs_you_use_weekly', 'Other_CDNs', 'CDN_vs_Plain_Old-School_Hosting', 'CDNs_speed_page_loading', 'Browsers_HTTP_Connections', 'FREE_HTTP_connections', 'Disadvantages', 'Free_CDN_pit_fight', 'CloudFlare', 'ajax.googleapis.com_google.com_fonts', 'CDNJS', 'jsDelivr', 'jsDelivr_also', 'CDN_Results'],
 			navigation: true,
 			navigationPosition: 'right',
 			navigationPosition: 'right',
-			navigationTooltips: ['Index', 'What is a CDN', 'CDNs you use weekly', 'Other CDNs', 'CDN vs Plain Old-School Hosting', 'CDNs speed page loading', 'Browsers HTTP Connections', 'FREE HTTP connections', 'Disadvantages', 'Free CDN pit fight', 'CloudFlare', 'Google apis & fonts', 'CDNJS', 'jsDelivr', 'CDN Results'],
+			navigationTooltips: ['Index', 'What is a CDN', 'CDNs you use weekly', 'Other CDNs', 'CDN vs Plain Old-School Hosting', 'CDNs speed page loading', 'Browsers HTTP Connections', 'FREE HTTP connections', 'Disadvantages', 'Free CDN pit fight', 'CloudFlare', 'Google apis & fonts', 'CDNJS', 'jsDelivr', 'jsDelivr also', 'CDN Results'],
 			sectionSelector: '.fp-art',
 			easing: 'easeInOutCubic',
 			scrollingSpeed: 618
@@ -58,7 +58,7 @@
 
 <article class="fp-art" id="fp-art2"><div class="centered"><h2>CDNs you use weekly</h2>
 <ul>
-<li>Google<ul>
+<li><a href="#ajax.googleapis.com_google.com_fonts">Google</a><ul>
 <li>google-analytics</li>
 <li>ajax.googleapis.com hosted libraries<ul><li>common: jQuery &amp; AngularJS</li></ul></li>
 <li>Google Fonts</li>
@@ -66,8 +66,7 @@
 </li>
 <li>Adobe Typekit's fancy "web" fonts</li>
 <li>MaxCDN<ul><li>code.jQuery.com, netdna.BootstrapCDN.com</li></ul></li>
-<li>Cloudflare (free &amp; paid)<ul>
-<li>optimizer, security, 24 PoPs</li>
+<li><a href="#CloudFlare">Cloudflare</a><ul>
 </ul>
 </li>
 </ul>
@@ -77,8 +76,8 @@
 <article class="fp-art" id="fp-art3"><div class="centered"><h2>Other CDNs</h2>
 <ul>
 <li>Free for OSS assets (minified JS, CSS, fonts)<ul>
-<li>jsDelivr (1160+ projects)</li>
-<li>CDNJS (750ish projects)</li>
+<li><a href="#jsDelivr">jsDelivr</a></li>
+<li><a href="#CDNJS">CDNJS</a></li>
 </ul>
 </li>
 <li>Paid<ul>
@@ -107,8 +106,8 @@
 <article class="fp-art" id="fp-art5"><div class="centered"><h2>CDNs speed page loading</h2>
 <ul>
 <li>Faster hosting<ul>
-<li>Closer = fewer hops</li>
-<li>Tuned to serve static files</li>
+<li>closer = fewer hops</li>
+<li>tuned to serve static files</li>
 </ul></li>
 <li>Maxes out browsers' Max Connections</li>
 </div></article>
@@ -130,17 +129,17 @@
 
 <article class="fp-art" id="fp-art7"><div class="centered"><h2>FREE HTTP connections!</h2>
 <p class="sectioningText"><b>Use those 2 to 11 hidden downloaders!<br>
-To fill a sink; it is faster using both hot & cold.</b><p>
+To fill a sink; it is faster using both hot & cold faucets.</b><p>
 <br>
 <ul>
 <li>Easy to use: replace static asset links with CDNs<ul>
-<li>Start with larger assets</li>
-<li>Via Grunt/Gulp/build scripts</li>
+<li>start with larger assets</li>
+<li>via Grunt/Gulp/build scripts</li>
 <li>Wordpress plugins, etc</li>
 </ul>
 <li>Workaround: 'shard' server<ul>
-<li>Subdomain: http://<b>static0</b>.mysite.com/picture.jpg</li>
-<li>May not help clients' I/O, should test</li>
+<li>subdomain: http://<b>static0</b>.mysite.com/picture.jpg</li>
+<li>may not help clients' I/O, should test</li>
 </ul>
 </li>
 </ul>
@@ -149,7 +148,7 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 <article class="fp-art" id="fp-art8"><div class="centered"><h2>Disadvantages</h2>
 <ul>
 <li>Could clog up other non-originating requests<ul>
-<li>Social plugins, tracking, API calls, ads...</li>
+<li>social plugins, tracking, API calls, ads...</li>
 </ul></li>
 <li>Free CDNs can't use your personalized files</li>
 <p class="sectioningText"><b>(excuses)</b><p>
@@ -172,13 +171,15 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 
 <article class="fp-art" id="fp-art10"><div class="centered"><h2>CloudFlare</h2>
 <ul>
-<li>Front-line security; all trafic hits CF first</li>
-<li>aggressive <a target="_blank" href="https://www.cloudflare.com/features-optimizer">content optimization</a></li>
+<li>Proxies your site (no manual intervention)</li>
+<li>Front-line security; all traffic hits CF first</li>
+<li>Aggressive <a target="_blank" href="https://www.cloudflare.com/features-optimizer">content optimization</a></li>
 <ul><li>extra crunching for mobile</li></ul>
 <li>CDN growing; <a target="_blank" href="https://www.cloudflare.com/network-map">31 PoPs </a> <span class="aside">(2015-03)</span></li>
+<li>paid upgrade</li>
 <p class="sectioningText"><b>CONS</b><p>
 <li>Currently no PoPs in China, Russia, North Africa, Middle East</li>
-<li>IPs get blocked for political content (China); cost of protecting free press</li>
+<li>IPs get blocked for political content (China)</li>
 </ul>
 </div></article>
 
@@ -214,16 +215,29 @@ To fill a sink; it is faster using both hot & cold.</b><p>
 <!-- comming https://www.keycdn.com/network https://blog.cloudflare.com/content/images/2014/09/cloudflare-illustration-map-upcoming.png
  <li>better uptime (failsave CDNs)</li> -->
 </ul></li>
-<li><a href="https://github.com/jsdelivr/jsdelivr#version-aliasing">SemVer aliasing</a></li>
 <li>Most projects (over 1400)</li>
-<li><a href="https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request">Collate JS | CSS assets</a> (<a href="http://cdn.jsdelivr.net/g/jquery@1.11,jquery.ui@1.9.2%28jquery.ui.effect.min.js%29,slimscroll@1.3,jquery.fullpage@2.1">eg</a>)</li>
-<li><a target="_blank" href="http://blog.jsdelivr.com/2014/06/public-cdn-auto-updated.html">auto-updating</a> bot</li>
+<li><a href="https://github.com/jsdelivr/jsdelivr#version-aliasing">SemVer aliasing</a></li>
+
+<li><a target="_blank" href="http://blog.jsdelivr.com/2014/06/public-cdn-auto-updated.html">Auto-updating</a> bot</li>
 <p class="sectioningText"><b>CONS</b><p>
 <li>Newest; lesser known/used (but <a href="http://trends.builtwith.com/cdn/jsDelivr">growing</a>)</li>
 </ul>
 </div></article>
 
-<article class="fp-art" id="fp-art14"><div class="centered"><h2>CDN Results</h2>
+<article class="fp-art" id="fp-art14"><div class="centered"><h2>jsDelivr also...</h2>
+<ul>
+<li><a href="https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request">Collates JS | CSS assets</a> (<a href="http://cdn.jsdelivr.net/g/jquery@1.11,jquery.ui@1.9.2%28jquery.ui.effect.min.js%29,slimscroll@1.3,jquery.fullpage@2.4">eg</a>)</li>
+<li>Has bot for <a target="_blank" href="http://blog.jsdelivr.com/2014/06/public-cdn-auto-updated.html">auto-updates</a></li>
+<p class="sectioningText"><b>Wait, there's more!</b><p>
+<li>Proxies entire <a href="http://plugins.svn.wordpress.org/">Wordpress plugin repo</a> for CDN hosting</li>
+<li>Font CDN coming soonish (can you help with Docker/Python?)</li>
+
+<p class="sectioningText"><b>Disclosure:</b><p>
+<li>Author helps with jsDelivr</li>
+</ul>
+</article>
+
+<article class="fp-art" id="fp-art15"><div class="centered"><h2>CDN Results</h2>
 <ul>
 <li>Faster loading = happier users</li>
 <li>Happy users + Free hosting = happier boss/client</li>
