@@ -48,6 +48,7 @@ body{
 	font-weight: normal;
 	color: #333;
 	color: rgba(0,0,0,0.5);
+	font-size: 130%;
 }
 .wrap{
 	margin-left: auto;
@@ -58,7 +59,7 @@ body{
 .intro p{
 	width: 50%;
 	margin: 0 auto;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 .section{
 	text-align:center;
@@ -271,9 +272,10 @@ a:hover, a:active {
 	width:100%;
 	border-collapse:collapse;
 	margin-top: 1em;
+	font-size: 85%;
 }
 .TFtable td{
-	padding:7px; border:#4e95f4 1px solid;
+	padding:0.1em;;
 }
 /* provide some minimal visual accomodation for IE8 and below */
 .TFtable tr{
